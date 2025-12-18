@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<AssemblyName>Application</AssemblyName>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<!-- Certificates to trust -->
+		<DockerfileRunArguments>-v "$(SolutionDir).certificates/intermediate-1.crt:/etc/ssl/certs/intermediate-1.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-2.crt:/etc/ssl/certs/intermediate-2.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-3.crt:/etc/ssl/certs/intermediate-3.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-4.crt:/etc/ssl/certs/intermediate-4.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/root.crt:/etc/ssl/certs/root.crt:ro"</DockerfileRunArguments>
+		<!-- HTTPS certificate -->
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/https.crt:/etc/ssl/private/https.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/https.key:/etc/ssl/private/https.key:ro"</DockerfileRunArguments>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<UserSecretsId>e3c90db9-685d-4230-a2bb-565d9186f2fa</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+	</ItemGroup>
+</Project>

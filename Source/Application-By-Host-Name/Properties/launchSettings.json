@@ -1,0 +1,21 @@
+{
+	"profiles": {
+		"Docker": {
+			"commandName": "Docker",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Docker"
+			},
+			"launchBrowser": true,
+			"launchUrl": "https://application.example.localhost"
+		},
+		"Kestrel": {
+			"applicationUrl": "https://application.example.localhost",
+			"commandName": "Project",
+			"dotnetRunMessages": true,
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Kestrel"
+			},
+			"launchBrowser": true
+		}
+	}
+}

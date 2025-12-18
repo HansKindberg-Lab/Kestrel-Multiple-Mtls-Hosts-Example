@@ -1,0 +1,41 @@
+<Solution>
+	<Folder Name="/.certificates/">
+		<File Path=".certificates/client-1.pfx" />
+		<File Path=".certificates/client-2.pfx" />
+		<File Path=".certificates/client-3.pfx" />
+		<File Path=".certificates/client-4.pfx" />
+		<File Path=".certificates/https.crt" />
+		<File Path=".certificates/https.key" />
+		<File Path=".certificates/https-1.crt" />
+		<File Path=".certificates/https-1.key" />
+		<File Path=".certificates/https-2.crt" />
+		<File Path=".certificates/https-2.key" />
+		<File Path=".certificates/https-3.crt" />
+		<File Path=".certificates/https-3.key" />
+		<File Path=".certificates/https-4.crt" />
+		<File Path=".certificates/https-4.key" />
+		<File Path=".certificates/intermediate-1.crt" />
+		<File Path=".certificates/intermediate-2.crt" />
+		<File Path=".certificates/intermediate-3.crt" />
+		<File Path=".certificates/intermediate-4.crt" />
+		<File Path=".certificates/root.crt" />
+	</Folder>
+	<Folder Name="/.root/">
+		<File Path=".dockerignore" />
+		<File Path=".editorconfig" />
+		<File Path=".gitignore" />
+		<File Path="Directory.Build.props" />
+		<File Path="Directory.Build.targets" />
+		<File Path="NuGet.config" />
+		<File Path="ReadMe.md" />
+	</Folder>
+	<Folder Name="/.windows-certificate-management/">
+		<Project Path=".windows-certificate-management/Cleanup/Cleanup.csproj" />
+		<Project Path=".windows-certificate-management/Management/Management.csproj" />
+		<Project Path=".windows-certificate-management/Setup/Setup.csproj" />
+	</Folder>
+	<Folder Name="/Source/">
+		<Project DefaultStartup="true" Path="Source/Application-By-Host-Name/Application-By-Host-Name.csproj" />
+		<Project Path="Source/Application-By-Port/Application-By-Port.csproj" />
+	</Folder>
+</Solution>

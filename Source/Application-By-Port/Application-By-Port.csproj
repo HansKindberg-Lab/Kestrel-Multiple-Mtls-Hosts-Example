@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<AssemblyName>Application</AssemblyName>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<!-- Port mappings -->
+		<DockerfileRunArguments>-p 5000:5000</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5001:5001</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5002:5002</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5003:5003</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5004:5004</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5005:5005</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5006:5006</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5007:5007</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5008:5008</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5009:5009</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5010:5010</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5011:5011</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5012:5012</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5013:5013</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5014:5014</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5015:5015</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5016:5016</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5017:5017</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5018:5018</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5019:5019</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5020:5020</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -p 5021:5021</DockerfileRunArguments>
+		<!-- Certificates to trust -->
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-1.crt:/etc/ssl/certs/intermediate-1.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-2.crt:/etc/ssl/certs/intermediate-2.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-3.crt:/etc/ssl/certs/intermediate-3.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/intermediate-4.crt:/etc/ssl/certs/intermediate-4.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/root.crt:/etc/ssl/certs/root.crt:ro"</DockerfileRunArguments>
+		<!-- HTTPS certificate -->
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/https.crt:/etc/ssl/private/https.crt:ro"</DockerfileRunArguments>
+		<DockerfileRunArguments>$(DockerfileRunArguments) -v "$(SolutionDir).certificates/https.key:/etc/ssl/private/https.key:ro"</DockerfileRunArguments>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<UserSecretsId>b71e3ace-0b35-4a7e-b795-6128e06fd191</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+	</ItemGroup>
+</Project>
